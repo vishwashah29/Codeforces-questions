@@ -47,11 +47,30 @@ int main()
                if(r<lcm) (count=r-b+1);
                else
                {
-                   for(int j=(l+l%lcm);j<=b;j++)
+                   for(int j=lcm;j<=r;j=j+lcm)
+                   {
+                        if(j>=l)
+                        {
+                            for(int k=0;k<b;k++)
+                            {
+                                if((j+k)<=r) count++;
+                            }
+                        }
+                       
+                   }
                }
+               A.push_back(count);
                
            }
+          
        }
+       for(int i=0;i<q;i++)
+       {
+            cout<<A[i]<<" "<<;
+       }
+       cout<<endl;
+   }
+   
     
    
    
